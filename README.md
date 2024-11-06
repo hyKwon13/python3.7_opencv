@@ -41,14 +41,7 @@ python3.7 -m pip install numpy
 OpenCV를 빌드하기 전에 필요한 의존성을 설치합니다. 이 단계는 OpenCV의 기능을 모두 지원하기 위해 다양한 라이브러리를 설치합니다.
 
 ```bash
-sudo apt-get update
-sudo apt-get install build-essential cmake unzip pkg-config
-sudo apt-get install libjpeg-dev libpng-dev libtiff-dev
-sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
-sudo apt-get install libxvidcore-dev libx264-dev
-sudo apt-get install libgtk-3-dev
-sudo apt-get install libatlas-base-dev gfortran
-sudo apt-get install python3-dev
+sudo apt-get update && sudo apt-get install -y build-essential cmake unzip pkg-config libjpeg-dev libpng-dev libtiff-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libgtk-3-dev libatlas-base-dev gfortran python3-dev
 ```
 
 ## 3. OpenCV 소스 코드 다운로드 및 빌드
