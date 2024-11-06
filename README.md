@@ -1,21 +1,21 @@
 # 젯슨 SD 카드 Jetpack SDK 설치
 
 ## Jetpack SDK 설치
-1. **SD 카드 포맷**: SD Card Formatter를 사용하여 64GB microSD 카드를 포맷
+### 1. SD 카드 포맷: SD Card Formatter를 사용하여 64GB microSD 카드를 포맷
     - [SD Card Formatter 다운로드](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
     - 포맷 버튼을 클릭하여 포맷을 완료
     - ![이미지](https://github.com/hyKwon13/Jetson-nano_PaddleOCR_CUDA/assets/117807382/40fec450-6ca2-48fe-b878-b73b55925ef2)
 
-2. **Jetpack SDK 4.6.1 설치**:
+### 2. Jetpack SDK 4.6.1 설치:
     - [Jetpack SDK 다운로드](https://developer.nvidia.com/embedded/jetpack-sdk-461)
 
-3. **balenaEtcher 사용**: balenaEtcher 프로그램을 사용하여 microSD 카드에 이미지 설치.
+### 3. balenaEtcher 사용: balenaEtcher 프로그램을 사용하여 microSD 카드에 이미지 설치.
     - [Etcher 다운로드](https://etcher.balena.io/)
 
 # 젯슨 OpenCV CUDA 환경 설정
 
 
-## 1. Python 3.7 설치 및 numpy 설치
+### 1. Python 3.7 설치 및 numpy 설치
 ```bash
 sudo apt update
 
@@ -38,14 +38,14 @@ sudo apt install python3-pip
 python3.7 -m pip install numpy
 ```
   
-## 2. 필요한 의존성 설치
+### 2. 필요한 의존성 설치
 OpenCV를 빌드하기 전에 필요한 의존성을 설치합니다. 이 단계는 OpenCV의 기능을 모두 지원하기 위해 다양한 라이브러리를 설치합니다.
 
 ```bash
 sudo apt-get update && sudo apt-get install -y build-essential cmake unzip pkg-config libjpeg-dev libpng-dev libtiff-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libgtk-3-dev libatlas-base-dev gfortran python3-dev
 ```
 
-## 3. OpenCV 소스 코드 다운로드 및 빌드
+### 3. OpenCV 소스 코드 다운로드 및 빌드
 OpenCV와 OpenCV Contrib 모듈의 최신 버전을 다운로드하고 빌드합니다.
 
 ```bash
@@ -59,7 +59,7 @@ mkdir build
 cd build
 ```
 
-## 4. CMake를 사용한 OpenCV 구성
+### 4. CMake를 사용한 OpenCV 구성
 CMake를 사용하여 OpenCV를 CUDA와 함께 빌드하도록 구성합니다. 주의할 점은 모든 경로가 정확하고, CUDA 관련 옵션을 올바르게 설정하는 것입니다.
 
 ```bash
@@ -83,7 +83,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D BUILD_EXAMPLES=ON ..
 ```
 
-## 5. 빌드 및 설치
+### 5. 빌드 및 설치
 
 ```bash
 make -j$(nproc) # 1~2시간 정도 소요됩니다.
@@ -91,7 +91,7 @@ sudo make install
 sudo ldconfig
 ```
 
-## 6. 환경 변수 설정
+### 6. 환경 변수 설정
 
 ~/.bashrc 파일 열기:
 
@@ -118,7 +118,7 @@ source ~/.bashrc
 ```
 
 
-## 7. 설치 확인
+### 7. 설치 확인
 Python에서 OpenCV가 올바르게 설치되었는지 확인합니다.
 
 ```bash
@@ -128,7 +128,7 @@ print(cv2.cuda.getCudaEnabledDeviceCount())
 ```
 
 
-# Paddlepaddle-GPU 설치
+## Paddlepaddle-GPU 설치
 Python 3.7에 paddlepaddle-gpu를 설치하기 위해 whl 파일을 직접 다운로드하여 설치하였습니다.
 
 1. **paddlepaddle-gpu 다운로드**: [다운로드 링크](https://forums.developer.nvidia.com/t/paddlepaddle-for-jetson/242765)
@@ -170,7 +170,7 @@ Python 3.7에 paddlepaddle-gpu를 설치하기 위해 whl 파일을 직접 다�
         pip install paddlepaddle_gpu-2.4.1-cp37-cp37m-linux_aarch64.whl
         ```
 
-# PaddleOCR 설치
+## PaddleOCR 설치
 
 1. **paddleocr 설치**
     ```bash
