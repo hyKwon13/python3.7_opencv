@@ -100,6 +100,27 @@ print(cv2.__version__)
 print(cv2.cuda.getCudaEnabledDeviceCount())
 ```
 
+### 7. 필수 패키지 설치
+```bash
+sudo apt update
+sudo apt install python3-pip
+python3.7 -m pip install --upgrade pip
+pip3.7 install python-multipart
+python3.7 -m pip install fastapi uvicorn
+sudo apt install python3-jetson-gpio
+sudo apt-get install v4l-utils
+```
+
+### 8. GPIO 권한 부여
+
+```bash
+sudo usermod -aG gpio $USER
+```
+
+### 9. 서버 코드 실행
+```bash
+sudo python3.7 server.py
+```
 
 ## Paddlepaddle-GPU 설치
 Python 3.7에 paddlepaddle-gpu를 설치하기 위해 whl 파일을 직접 다운로드하여 설치하였습니다.
