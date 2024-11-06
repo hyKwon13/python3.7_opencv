@@ -122,7 +122,7 @@ sudo usermod -aG gpio $USER
 sudo python3.7 server.py
 ```
 
-## Paddlepaddle-GPU 설치
+## 옵션: Paddlepaddle-GPU 설치
 Python 3.7에 paddlepaddle-gpu를 설치하기 위해 whl 파일을 직접 다운로드하여 설치하였습니다.
 
 1. **paddlepaddle-gpu 다운로드**: [다운로드 링크](https://forums.developer.nvidia.com/t/paddlepaddle-for-jetson/242765)
