@@ -1,6 +1,6 @@
-# 젯슨 SD 카드 Jetpack SDK 설치
+# 비전 센서 개발 환경 구축
 
-## Jetpack SDK 설치
+## 필수: SD카드 Jetpack SDK 설치
 1. **SD 카드 포맷**: SD Card Formatter를 사용하여 64GB microSD 카드를 포맷
     - [SD Card Formatter 다운로드](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
     - 포맷 버튼을 클릭하여 포맷을 완료
@@ -12,8 +12,7 @@
 3. **balenaEtcher 사용**: balenaEtcher 프로그램을 사용하여 microSD 카드에 이미지 설치.
     - [Etcher 다운로드](https://etcher.balena.io/)
 
-# 젯슨 OpenCV CUDA 환경 설정
-
+## 필수: 젯슨 OpenCV CUDA 환경 설정
 
 ### 1. Python 3.7 설치 및 numpy 설치
 ```bash
@@ -164,7 +163,7 @@ Python 3.7에 paddlepaddle-gpu를 설치하기 위해 whl 파일을 직접 다�
         pip install paddlepaddle_gpu-2.4.1-cp37-cp37m-linux_aarch64.whl
         ```
 
-## PaddleOCR 설치
+## 옵션: PaddleOCR 설치
 
 1. **paddleocr 설치**
     ```bash
@@ -172,57 +171,54 @@ Python 3.7에 paddlepaddle-gpu를 설치하기 위해 whl 파일을 직접 다�
     ```
 
 2. **오류 해결**
-    ```bash
+    ```plaintext
     Failed to build psutil
     ERROR: Could not build wheels for psutil, which is required to install pyproject.toml-based projects
     ```
-
-    이 오류는 psutil 패키지를 빌드하는 과정에서 Python 헤더 파일을 찾을 수 없어서 발생한 문제입니다. 이를 해결하려면 필요한 Python 헤더 파일을 설치해야 합니다.
+    이 오류는 `psutil` 패키지를 빌드하는 과정에서 Python 헤더 파일을 찾을 수 없어서 발생합니다. 다음 명령어로 해결할 수 있습니다:
 
     ```bash
     sudo apt-get install gcc python3-dev
     pip3 install paddleocr
     ```
 
-    문제가 해결되지 않으면 psutil 패키지를 빌드할 때 필요한 추가적인 의존성을 설치해보세요.
+    만약 해결되지 않으면 추가 의존성을 설치해보세요:
     ```bash
     sudo apt-get install build-essential
     pip install paddleocr
     ```
 
 3. **여전히 오류 발생 시**
-
-    python3-dev 패키지가 누락되었을 가능성이 있으므로, 해당 패키지를 다시 설치해보세요.
+    `python3-dev` 패키지가 누락된 경우 다시 설치해보세요.
     ```bash
     sudo apt-get install python3.7-dev
     pip install psutil
     ```
 
 4. **환경 변수 설정 확인**
-    Python 헤더 파일을 찾지 못하는 경우, 환경 변수가 제대로 설정되지 않았을 수 있습니다. 아래 명령어를 사용하여 CPATH 환경 변수를 설정해 보세요.
+    Python 헤더 파일을 찾지 못할 경우, CPATH 환경 변수를 설정해보세요.
     ```bash
     export CPATH=/usr/include/python3.7m
     ```
 
-    다시 psutil 설치
+    이후 다시 `psutil`을 설치합니다.
     ```bash
     pip install psutil
     ```
 
 5. **OpenCV 환경 변수 설정**
-    ```bash
+    ```plaintext
     ImportError: OpenCV loader: missing configuration file: ['config-3.7.py', 'config-3.py']. Check OpenCV installation.
     ```
-
-    이 오류는 OpenCV가 설치된 경로가 올바르게 설정되어 있는지 확인하세요. 경우에 따라 환경 변수를 수동으로 설정해야 할 수도 있습니다. Python 3.7로 환경 변수를 설정합니다.
+    이 오류가 발생하면 OpenCV 설치 경로를 확인하고, Python 3.7 환경 변수를 설정합니다.
     ```bash
     export PYTHONPATH=~/project/paddle3.7/lib/python3.7/site-packages:$PYTHONPATH
     ```
 
 6. **설치 확인 예제**
-    다음 예제 코드를 통해 PaddleOCR이 GPU와 TensorRT를 제대로 사용하고 있는지 확인할 수 있습니다. 이를 통해 onnxruntime보다 더 빠른 추론 속도를 얻을 수 있습니다. 다만, TensorRT를 사용할 경우 초기 구동 시 많은 메모리를 사용하여 시작 속도가 느려질 수 있습니다.
+    다음 예제를 통해 PaddleOCR가 GPU와 TensorRT를 사용하는지 확인하세요.
     
-    ```bash
+    ```python
     import cv2
     from paddleocr import PaddleOCR
     
@@ -269,8 +265,6 @@ Python 3.7에 paddlepaddle-gpu를 설치하기 위해 whl 파일을 직접 다�
         show_log=False,
     )
     
-    
-                
     for _ in range(30):
         _, _ = cap.read()
     
@@ -292,8 +286,8 @@ Python 3.7에 paddlepaddle-gpu를 설치하기 위해 whl 파일을 직접 다�
     cv2.destroyAllWindows()
     ```
 
-7. **TIP**
-    Jetson Nano에서 더 큰 모델이나 데이터를 실행하려면 스왑 메모리 공간을 늘려야 할 수도 있습니다. 스왑 메모리 공간을 8GB로 늘리는 것이 좋습니다. 스왑 메모리 공간을 늘리려면 다음 단계를 참조하십시오.
+7. **TIP: 스왑 메모리 증가**
+    Jetson Nano에서 스왑 메모리를 8GB로 늘려 성능을 향상시킬 수 있습니다.
     
     ```bash
     sudo fallocate -l 8G /var/swapfile8G
@@ -303,19 +297,14 @@ Python 3.7에 paddlepaddle-gpu를 설치하기 위해 whl 파일을 직접 다�
     sudo bash -c 'echo "/var/swapfile8G swap swap defaults 0 0" >> /etc/fstab'
     ```
     
-    fallocate 오류 발생시
-    
-    ```bash
+    만약 `fallocate` 오류가 발생한다면:
+    ```plaintext
     fallocate: fallocate failed: Text file busy
     ```
     
-    기존 스왑 파일 비활성화
+    기존 스왑 파일을 비활성화하고 다시 시도하세요.
     ```bash
     sudo swapoff -a
-    ```
-    
-    새 스왑 파일 생성
-    ```bash
     sudo fallocate -l 8G /var/swapfile8G
     sudo chmod 600 /var/swapfile8G
     sudo mkswap /var/swapfile8G
