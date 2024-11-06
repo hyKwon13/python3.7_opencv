@@ -1,4 +1,4 @@
-# 젯슨 나노 SD 카드 Jetpack SDK 설치
+# 젯슨 SD 카드 Jetpack SDK 설치
 
 ## Jetpack SDK 설치
 1. **SD 카드 포맷**: SD Card Formatter를 사용하여 64GB microSD 카드를 포맷
@@ -12,7 +12,7 @@
 3. **balenaEtcher 사용**: balenaEtcher 프로그램을 사용하여 microSD 카드에 이미지 설치.
     - [Etcher 다운로드](https://etcher.balena.io/)
 
-# 젯슨 나노 OpenCV CUDA 환경 설정
+# 젯슨 OpenCV CUDA 환경 설정
 
 
 ## 1. Python 3.7 설치 및 numpy 설치
