@@ -91,34 +91,7 @@ sudo make install
 sudo ldconfig
 ```
 
-### 6. 환경 변수 설정
-
-~/.bashrc 파일 열기:
-
-```bash
-vim ~/.bashrc
-```
-
-환경 변수 추가: 맨 아래로 이동하여 다음 줄을 추가합니다.
-
-```bash
-export PYTHONPATH=/usr/local/lib/python3.7/site-packages:$PYTHONPATH
-```
-
-파일 저장 및 종료: 편집이 완료되면 Esc 키를 눌러 명령 모드로 돌아간 후, 다음 명령어를 입력해 저장하고 종료합니다.
-
-```bash
-:wq
-```
-
-변경 사항 적용:
-
-```bash
-source ~/.bashrc
-```
-
-
-### 7. 설치 확인
+### 6. 설치 확인
 Python에서 OpenCV가 올바르게 설치되었는지 확인합니다.
 
 ```bash
