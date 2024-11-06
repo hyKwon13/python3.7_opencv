@@ -49,6 +49,7 @@ sudo apt-get update && sudo apt-get install -y build-essential cmake unzip pkg-c
 OpenCV와 OpenCV Contrib 모듈의 최신 버전을 다운로드하고 빌드합니다.
 
 ```bash
+cd ~
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.9.0.zip
 wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.9.0.zip
 unzip opencv.zip
