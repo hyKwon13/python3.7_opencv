@@ -126,7 +126,7 @@ print(cv2.cuda.getCudaEnabledDeviceCount())
 ```
 
 
-## Paddlepaddle-GPU 설치
+# Paddlepaddle-GPU 설치
 Python 3.7에 paddlepaddle-gpu를 설치하기 위해 whl 파일을 직접 다운로드하여 설치하였습니다.
 
 1. **paddlepaddle-gpu 다운로드**: [다운로드 링크](https://forums.developer.nvidia.com/t/paddlepaddle-for-jetson/242765)
@@ -168,7 +168,7 @@ Python 3.7에 paddlepaddle-gpu를 설치하기 위해 whl 파일을 직접 다�
         pip install paddlepaddle_gpu-2.4.1-cp37-cp37m-linux_aarch64.whl
         ```
 
-## PaddleOCR 설치
+# PaddleOCR 설치
 
 1. **paddleocr 설치**
     ```bash
@@ -223,7 +223,7 @@ Python 3.7에 paddlepaddle-gpu를 설치하기 위해 whl 파일을 직접 다�
     export PYTHONPATH=~/project/paddle3.7/lib/python3.7/site-packages:$PYTHONPATH
     ```
 
-## 설치 확인 예제
+6. **설치 확인 예제**
 다음 예제 코드를 통해 PaddleOCR이 GPU와 TensorRT를 제대로 사용하고 있는지 확인할 수 있습니다. 이를 통해 onnxruntime보다 더 빠른 추론 속도를 얻을 수 있습니다. 다만, TensorRT를 사용할 경우 초기 구동 시 많은 메모리를 사용하여 시작 속도가 느려질 수 있습니다.
 
 ```bash
@@ -296,7 +296,7 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
-## TIP
+7. **TIP**
 Jetson Nano에서 더 큰 모델이나 데이터를 실행하려면 스왑 메모리 공간을 늘려야 할 수도 있습니다. 스왑 메모리 공간을 8GB로 늘리는 것이 좋습니다. 스왑 메모리 공간을 늘리려면 다음 단계를 참조하십시오.
 
 ```bash
