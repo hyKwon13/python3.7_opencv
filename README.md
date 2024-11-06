@@ -171,7 +171,7 @@ Python 3.7에 paddlepaddle-gpu를 설치하기 위해 whl 파일을 직접 다�
     ```
 
 2. **오류 해결**
-    ```plaintext
+    ```bash
     Failed to build psutil
     ERROR: Could not build wheels for psutil, which is required to install pyproject.toml-based projects
     ```
