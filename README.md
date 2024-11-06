@@ -1,15 +1,15 @@
 # 젯슨 SD 카드 Jetpack SDK 설치
 
 ## Jetpack SDK 설치
-### 1. SD 카드 포맷: SD Card Formatter를 사용하여 64GB microSD 카드를 포맷
+1. **SD 카드 포맷**: SD Card Formatter를 사용하여 64GB microSD 카드를 포맷
     - [SD Card Formatter 다운로드](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
     - 포맷 버튼을 클릭하여 포맷을 완료
     - ![이미지](https://github.com/hyKwon13/Jetson-nano_PaddleOCR_CUDA/assets/117807382/40fec450-6ca2-48fe-b878-b73b55925ef2)
 
-### 2. Jetpack SDK 4.6.1 설치:
+2. **Jetpack SDK 4.6.1 설치**:
     - [Jetpack SDK 다운로드](https://developer.nvidia.com/embedded/jetpack-sdk-461)
 
-### 3. balenaEtcher 사용: balenaEtcher 프로그램을 사용하여 microSD 카드에 이미지 설치.
+3. **balenaEtcher 사용**: balenaEtcher 프로그램을 사용하여 microSD 카드에 이미지 설치.
     - [Etcher 다운로드](https://etcher.balena.io/)
 
 # 젯슨 OpenCV CUDA 환경 설정
