@@ -1,6 +1,6 @@
 아이디 : visionsensor </br>
 비밀번호 : 0000
-
+https://github.com/hyKwon13/python3.7_opencv/blob/5e08d0b3176f0d8e21a61db17c96838152070734/KakaoTalk_20241108_145417910_01.jpg
 # 비전 센서 개발 환경 구축
 
 ## 필수: SD카드 Jetpack SDK 설치
