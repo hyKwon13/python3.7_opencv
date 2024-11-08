@@ -1,3 +1,6 @@
+아이디 : visionsensor </br>
+비밀번호 : 0000
+
 # 비전 센서 개발 환경 구축
 
 ## 필수: SD카드 Jetpack SDK 설치
