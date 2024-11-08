@@ -8,7 +8,7 @@ https://github.com/hyKwon13/python3.7_opencv/blob/5e08d0b3176f0d8e21a61db17c9683
     - [SD Card Formatter 다운로드](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
     - 포맷 버튼을 클릭하여 포맷을 완료
     - ![이미지](https://github.com/hyKwon13/Jetson-nano_PaddleOCR_CUDA/assets/117807382/40fec450-6ca2-48fe-b878-b73b55925ef2)
-
+    - ![이미지](https://github.com/hyKwon13/python3.7_opencv/blob/5e08d0b3176f0d8e21a61db17c96838152070734/KakaoTalk_20241108_145417910_01.jpg)
 2. **Jetpack SDK 4.6.1 설치**:
     - [Jetpack SDK 다운로드](https://developer.nvidia.com/embedded/jetpack-sdk-461)
 
