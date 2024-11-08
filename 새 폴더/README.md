@@ -64,14 +64,14 @@
 
 ### 포커스 설정
 
-- **엔드포인트:** `/set_focus`
+- **API:** `/set_focus`
 - **HTTP 메서드:** `PUT`
 - **설명:** 카메라의 포커스 값을 설정합니다.
 - **요청 Body:**
 
     ```json
     {
-        "focus": 100  # 설정할 포커스 값 (정수)
+        "focus": 100  // 설정할 포커스 값 (정수)
     }
     ```
 
@@ -86,7 +86,7 @@
 
 ### 노출 설정
 
-- **엔드포인트:** `/set_exposure`
+- **API:** `/set_exposure`
 - **HTTP 메서드:** `PUT`
 - **설명:** 카메라의 노출 값을 설정합니다.
 - **요청 Body:**
@@ -108,7 +108,7 @@
 
 ### 자동 포커스 및 노출 설정
 
-- **엔드포인트:** `/set_auto_controls`
+- **API:** `/set_auto_controls`
 - **HTTP 메서드:** `PUT`
 - **설명:** 카메라의 자동 포커스 및 자동 노출 기능을 설정합니다.
 - **요청 Body:**
@@ -136,7 +136,7 @@
 
 ### 장치 IP 설정
 
-- **엔드포인트:** `/set_device_ip`
+- **API:** `/set_device_ip`
 - **HTTP 메서드:** `PUT`
 - **설명:** 장치의 IP 주소, 포트, 서브넷 마스크를 설정합니다.
 - **요청 Body:**
@@ -166,7 +166,7 @@
 
 ### 출력처 설정
 
-- **엔드포인트:** `/set_output_destination`
+- **API:** `/set_output_destination`
 - **HTTP 메서드:** `PUT`
 - **설명:** 이미지 출력처를 설정합니다.
 - **요청 Body:**
@@ -188,7 +188,7 @@
 
 ### 출력 상태 설정
 
-- **엔드포인트:** `/set_output_state`
+- **API:** `/set_output_state`
 - **HTTP 메서드:** `PUT`
 - **설명:** 특정 출력 포트의 상태를 설정합니다.
 - **요청 Body:**
@@ -213,7 +213,7 @@
 
 ### 포트 상태 조회
 
-- **엔드포인트:** `/get_port_states`
+- **API:** `/get_port_states`
 - **HTTP 메서드:** `GET`
 - **설명:** 현재 모든 출력 포트의 상태를 조회합니다.
 - **응답:**
@@ -235,7 +235,7 @@
 
 ### 접속 설정 업데이트
 
-- **엔드포인트:** `/set_connection_settings`
+- **API:** `/set_connection_settings`
 - **HTTP 메서드:** `PUT`
 - **설명:** FTP 서버의 접속 설정을 업데이트합니다.
 - **요청 Body:**
@@ -265,7 +265,7 @@
 
 ### FTP 접속 테스트
 
-- **엔드포인트:** `/test_connection`
+- **API:** `/test_connection`
 - **HTTP 메서드:** `PUT`
 - **설명:** 설정된 FTP 서버에 접속 테스트를 수행합니다.
 - **요청 Body:**
@@ -300,7 +300,7 @@
 
 ### 전송 조건 설정
 
-- **엔드포인트:** `/set_transfer_condition`
+- **API:** `/set_transfer_condition`
 - **HTTP 메서드:** `PUT`
 - **설명:** FTP로 이미지 전송 조건을 설정합니다.
 - **요청 Body:**
@@ -326,7 +326,7 @@
 
 ### 위치 보정 ROI 설정
 
-- **엔드포인트:** `/set_roi`
+- **API:** `/set_roi`
 - **HTTP 메서드:** `PUT`
 - **설명:** 위치 보정을 위한 ROI(Region of Interest)를 설정합니다.
 - **요청 Body:**
@@ -350,7 +350,7 @@
 
 ### 색 평균 ROI 설정
 
-- **엔드포인트:** `/set_color_average_roi`
+- **API:** `/set_color_average_roi`
 - **HTTP 메서드:** `PUT`
 - **설명:** 색 평균 계산을 위한 ROI를 설정합니다.
 - **요청 Body:**
@@ -373,7 +373,7 @@
 
 ### 대조 ROI 설정
 
-- **엔드포인트:** `/set_contrast_roi`
+- **API:** `/set_contrast_roi`
 - **HTTP 메서드:** `PUT`
 - **설명:** 대조 계산을 위한 ROI를 설정합니다.
 - **요청 Body:**
@@ -396,7 +396,7 @@
 
 ### 직경 ROI 설정
 
-- **엔드포인트:** `/set_diameter_roi`
+- **API:** `/set_diameter_roi`
 - **HTTP 메서드:** `PUT`
 - **설명:** 직경 측정을 위한 ROI를 설정합니다.
 - **요청 Body:**
@@ -420,7 +420,7 @@
 
 ### 돌출 검출 ROI 설정
 
-- **엔드포인트:** `/set_protrusion_roi`
+- **API:** `/set_protrusion_roi`
 - **HTTP 메서드:** `PUT`
 - **설명:** 돌출 검출을 위한 ROI와 HSV 범위를 설정합니다.
 - **요청 Body:**
@@ -445,7 +445,7 @@
 
 ### ROI 조회
 
-- **엔드포인트:** `/get_active_rois`
+- **API:** `/get_active_rois`
 - **HTTP 메서드:** `GET`
 - **설명:** 활성화된 모든 ROI 목록을 조회합니다.
 - **응답:**
@@ -470,7 +470,7 @@
 
 ### 활성화된 기능 조회
 
-- **엔드포인트:** `/get_active_features`
+- **API:** `/get_active_features`
 - **HTTP 메서드:** `GET`
 - **설명:** 활성화된 기능 목록과 각 기능의 ROI 개수를 조회합니다.
 - **응답:**
@@ -489,7 +489,7 @@
 
 ### 기능 비활성화
 
-- **엔드포인트:** `/disable_feature`
+- **API:** `/disable_feature`
 - **HTTP 메서드:** `PUT`
 - **설명:** 특정 기능을 비활성화합니다.
 - **요청 Body:**
@@ -522,7 +522,7 @@
 
 ### 허용 오차 설정
 
-- **엔드포인트:** `/set_tolerance`
+- **API:** `/set_tolerance`
 - **HTTP 메서드:** `PUT`
 - **설명:** 특정 도구의 허용 오차 값을 설정합니다.
 - **요청 Body:**
@@ -551,7 +551,7 @@
 
 ### 허용 오차 조회
 
-- **엔드포인트:** `/get_tolerance`
+- **API:** `/get_tolerance`
 - **HTTP 메서드:** `GET`
 - **설명:** 현재 설정된 모든 허용 오차 값을 조회합니다.
 - **응답:**
@@ -583,7 +583,7 @@
 
 ### 입력 신호 확인
 
-- **엔드포인트:** `/check_input_signal`
+- **API:** `/check_input_signal`
 - **HTTP 메서드:** `GET`
 - **설명:** 특정 입력 포트(IN1)에서 신호를 감지하여 반환합니다.
 - **응답:**
@@ -596,7 +596,7 @@
 
 ### IO 포트 설정
 
-- **엔드포인트:** `/set_io_ports`
+- **API:** `/set_io_ports`
 - **HTTP 메서드:** `PUT`
 - **설명:** 입력 포트 설정을 업데이트합니다.
 - **요청 Body:**
@@ -622,7 +622,7 @@
 
 ### IO 포트 조회
 
-- **엔드포인트:** `/get_io_ports`
+- **API:** `/get_io_ports`
 - **HTTP 메서드:** `GET`
 - **설명:** 현재 모든 I/O 포트의 상태를 조회합니다.
 - **응답:**
@@ -646,7 +646,7 @@
 
 ### 종합 판정 조건 설정
 
-- **엔드포인트:** `/set_judgement_condition`
+- **API:** `/set_judgement_condition`
 - **HTTP 메서드:** `PUT`
 - **설명:** 종합 판정 조건을 설정합니다.
 - **요청 Body:**
@@ -668,7 +668,7 @@
 
 ### 종합 판정 조건 조회
 
-- **엔드포인트:** `/get_judgement_condition`
+- **API:** `/get_judgement_condition`
 - **HTTP 메서드:** `GET`
 - **설명:** 현재 설정된 종합 판정 조건을 조회합니다.
 - **응답:**
@@ -685,7 +685,7 @@
 
 ### 장치 존재 여부 확인
 
-- **엔드포인트:** `/existence_device`
+- **API:** `/existence_device`
 - **HTTP 메서드:** `GET`
 - **설명:** 장치의 존재 여부를 확인하고, 장치 이름과 펌웨어 버전을 반환합니다.
 - **요청 파라미터:** 없음
@@ -700,7 +700,7 @@
 
 ### 마스터 이미지 조회
 
-- **엔드포인트:** `/get_master_image`
+- **API:** `/get_master_image`
 - **HTTP 메서드:** `GET`
 - **설명:** 마스터 이미지를 반환합니다.
 - **요청 파라미터:** 없음
@@ -716,7 +716,7 @@
 
 ### 마스터 이미지 설정
 
-- **엔드포인트:** `/set_master_image`
+- **API:** `/set_master_image`
 - **HTTP 메서드:** `PUT`
 - **설명:** 마스터 이미지를 설정합니다.
 - **요청 Body:** `multipart/form-data` 형식의 이미지 파일
@@ -730,7 +730,7 @@
 
 ### TRIG 조건 설정
 
-- **엔드포인트:** `/set_trig_condition`
+- **API:** `/set_trig_condition`
 - **HTTP 메서드:** `PUT`
 - **설명:** TRIG 상태를 설정합니다.
 - **요청 Body:**
@@ -752,7 +752,7 @@
 
 ### TRIG 조건 조회
 
-- **엔드포인트:** `/get_trig_condition`
+- **API:** `/get_trig_condition`
 - **HTTP 메서드:** `GET`
 - **설명:** 현재 설정된 TRIG 상태를 조회합니다.
 - **응답:**
@@ -765,7 +765,7 @@
 
 ### AI 촬영 시작
 
-- **엔드포인트:** `/start_ai_capture`
+- **API:** `/start_ai_capture`
 - **HTTP 메서드:** `PUT`
 - **설명:** AI 촬영 프로세스를 시작합니다.
 - **요청 Body:** 없음
@@ -779,7 +779,7 @@
 
 ### AI 촬영 결과 조회
 
-- **엔드포인트:** `/get_ai_capture_results`
+- **API:** `/get_ai_capture_results`
 - **HTTP 메서드:** `GET`
 - **설명:** AI 촬영 결과를 반환합니다.
 - **요청 파라미터:** 없음
@@ -802,7 +802,7 @@
 
 ### AI 촬영 상태 조회
 
-- **엔드포인트:** `/ai_capture_status`
+- **API:** `/ai_capture_status`
 - **HTTP 메서드:** `GET`
 - **설명:** AI 촬영의 진행 상태를 반환합니다.
 - **응답:**
@@ -815,7 +815,7 @@
 
 ### 모든 설정 저장
 
-- **엔드포인트:** `/save_all_settings`
+- **API:** `/save_all_settings`
 - **HTTP 메서드:** `PUT`
 - **설명:** 모든 설정을 파일에 저장합니다.
 - **요청 파라미터:** 없음
@@ -830,7 +830,7 @@
 
 ### 모든 설정 불러오기
 
-- **엔드포인트:** `/load_all_settings`
+- **API:** `/load_all_settings`
 - **HTTP 메서드:** `GET`
 - **설명:** 모든 설정을 파일에서 불러옵니다.
 - **응답:**
@@ -853,7 +853,7 @@
 
 ## 11. 위치 보정 프레임 조회
 
-- **엔드포인트:** `/get_correction_frame`
+- **API:** `/get_correction_frame`
 - **HTTP 메서드:** `GET`
 - **설명:** 위치 보정을 수행하고 결과 이미지를 반환합니다.
 - **요청 파라미터:** 없음
@@ -944,4 +944,3 @@
 
 ```bash
 python your_script.py
-
